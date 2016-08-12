@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Urbantest - Data Pasien</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pasien Apps">
+<meta name="author" content="Debby Sischa">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../public/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+    <div >
+        <h2 style="color:black; text-align:center">Urbanhire Test - Read Data</h2>
+    </div>
+    <div class="container">
+        <h3>Users</h3>
+        <a class="btn btn-info" href="/user/add"> Add New Pasien </a>
+        <hr />
+        <div class="table-responsive">
+            <table class="table table-striped" border="1">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Gender</th>
+                        <th>Phone</th>
+                        <th>Alamat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(data.length){
+                        var no = 1;
+                        for (var i=0; i < data.length;i++){%>
+                            <tr>
+                                <td><%=no++ %></td> 
+                                <td><%=data[i].Name %></td>
+                                <td><%=data[i].Username %></td>
+                                <td><%=data[i].Gender %></td>
+                                <td><%=data[i].Phone %></td>
+                                <td>
+                                    <%=data[i].Address %> <br />
+                                    Keluarahan : <%=data[i].Kelurahan %> <br/>
+                                    RT/RW : <%=data[i].RTRW %>
+                                </td>
+                                <td>
+                                    <a href="/user/update/<%=data[i].ID %>"> Update</a>  <b>|</b>  
+                                    <a href="/user/del/<%=data[i].ID %>"> Hapus</a>
+                                </td>
+                            </tr>
+                        <% }
+                    } else {%>
+                            <tr>
+                                <td colspan="3">Tidak Ada Event Baru</td>
+                            </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

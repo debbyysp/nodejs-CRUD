@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Urbantest - Data Pasien</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pasien Apps">
+<meta name="author" content="Debby Sischa">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../public/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+    <div >
+        <h2 style="color:black; text-align:center">Urbanhire Test - Add Data</h2>
+    </div>
+    <div class="container">
+        <form role="form" method="post" action="/user/add">
+            <div class="col3">
+                <label for="id">ID</label>
+                <input type="text" class="form-control" name="id" id="id" placeholder="id..." required>
+            </div>
+            
+            <div class="col3">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama..." required>
+            </div>
+
+            <div class="col3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="username..." required>
+            </div>
+
+            <div class="col3">
+                <label for="password">Password</label>
+                <input type="text" class="form-control" name="password" id="password" placeholder="password..." required>
+            </div>
+
+            <div class="col3">
+                <label for="gender">Gender</label>
+                <input type="text" class="form-control" name="gender" id="gender" placeholder="gender..." required>
+            </div>
+
+            <div class="col3">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="phone number..." required>
+            </div>
+
+            <div class="col3">
+                <label for="address">Alamat</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="address..." required>
+            </div>
+
+            <div class="col3">
+                <label for="kelurahan">Kelurahan</label>
+                <input type="text" class="form-control" name="kelurahan" id="kelurahan" placeholder="kelurahan...">
+            </div>
+
+            <div class="col3">
+                <label for="rtrw">RT / RW</label>
+                <input type="text" class="form-control" name="rtrw" id="rtrw" placeholder="RT / RW ...">
+            </div>
+            <br/>
+            <div class="button">
+                <button type="submit" class ="btn btn-success" id="save-user">Simpan</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
